@@ -15,8 +15,9 @@ mfaAuth() {
 }
 
 echo "Select aws profile"
+profiles=$(aws configure list-profiles | grep -v -e mfa -e amplify)
 
-select cmd in $(aws configure list-profiles); do
+select cmd in $profiles; do
     echo "set $cmd profile"
     mfaAuth $cmd
     break
