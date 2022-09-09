@@ -3,6 +3,6 @@
 ## 使い方
 - シンボリックリンク
 ```
-ln -s ~/workspace/scripts ~/.scripts
+ln -s $(pwd) ~/.scripts
 ```
 
